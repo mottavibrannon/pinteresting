@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  #get 'pages/home' - Uncomment to allow additional home page
+  root "pages#home"
+  get "about" => "pages#about"
+  # Casting the contact_us path as contact-us using underscores
+  #Visit this URL: http://www.stephentong.com/blogs/rails-4-routing-with-hyphens-in-the-url
+  get "contact-us", to: "pages#contact_us", as: "contact-us"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
