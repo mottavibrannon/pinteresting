@@ -1,2 +1,56 @@
-<h1>Welcome to Pinteresting!</h1>
-<p>Sign up <%= link_to "here", "#" %>.</p>
+<div id="homeCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#homeCarousel" data-slide-to="1"></li>
+    <li data-target="#homeCarousel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <%= image_tag("cheeseBoard.jpg", :alt=>"Cheese Board") %> 
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>Welcome to <font color="#ffffff">delish.us</font></h1>
+          <p>delish.us is the best place to find the best food nearby</p>
+          <p>
+            <%= link_to "Sign Up","#", class: "btn btn-large btn-primary"%>
+          </p>
+        </div>
+      </div><!-- /.container -->
+    </div>
+    <div class="item">
+      <%= image_tag("dinnerTable.jpeg", :alt=>"Dinner Table") %>
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>Welcome to <font color="#ffffff">delish.us</font></h1>
+          <p>delish.us is the best place to find the best food nearby</p>
+          <p>
+            <%= link_to "Sign Up","#", class: "btn btn-large btn-primary"%>
+          </p>
+        </div>
+      </div><!-- /.container -->
+    </div><!-- /.item -->
+    <div class="item">
+      <%= image_tag("moscowMule.jpg", :alt=>"Moscow Mule") %>
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>Welcome to <font color="#ffffff">delish.us</font></h1>
+          <p>delish.us is the best place to find the best food nearby</p>
+          <p>
+            <%= link_to "Sign Up","#", class: "btn btn-large btn-primary  "%>
+          </p>  
+        </div>
+      </div><!-- /.container -->
+    </div><!-- /.item -->
+  </div><!-- /.carousel-inner -->
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#homeCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#homeCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div>

@@ -1,0 +1,69 @@
+$body-bg:		#ffffff;
+$navbar-default-link-color:		#fa9a97;
+$navbar-default-link-hover-color:		#bdc3c7;
+$btn-primary-bg:		#1abc9c;
+
+/*CUSTOMIZE CAROUSEL
+-----------------------------*/
+.carousel {
+	height: 500px;
+	margin-bottom: 60px;
+}
+
+.carousel .item {
+  height: 500px;
+  background-color: #777;
+}
+
+.carousel img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	min-width: 100%;
+	height: 500px;
+}
+
+/*CUSTOMIZE CAROUSEL CONTAINER
+-----------------------------*/
+.carousel .container {
+	position: relative;
+	z-index: 9;
+}
+
+.carousel .container .carousel-caption {
+  background-color: transparent;
+  position: static;
+  max-width: 550px;
+  padding-right: 20px;
+  margin-top: 190px;
+  text-align: left;
+}
+
+.carousel .container .btn {
+	padding: 9px 20px;
+	font-size: 17.5px;
+	border-radius: 6px;
+}
+
+.carousel-control {
+	height: 500px;
+	margin-top: 0px;
+	font-size: 120px;
+	text-shadow: 0 1px 1px rgba(0,0,0,0);
+	background-color: transparent;
+	border: 0;
+	z-index: 10;
+}
+
+/*CUSTOMIZE NAVBAR
+-----------------------------*/
+.navbar-wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+	margin-top: 20px;
+}
+
+@import 'bootstrap';
