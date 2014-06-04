@@ -7,7 +7,7 @@ $btn-primary-bg:		#1abc9c;
 -----------------------------*/
 .carousel {
 	height: 500px;
-	margin-bottom: 60px;
+	margin-bottom: 40px;
 }
 
 .carousel .item {
@@ -66,4 +66,36 @@ $btn-primary-bg:		#1abc9c;
 	margin-top: 20px;
 }
 
+/*CUSTOMIZE MARKETING CONTAINER
+-----------------------------*/
+.marketing {
+	text-align: center;
+}
+
+.container.marketing.title{
+	padding-bottom: 40px;
+}
+
+.marketing .col-lg-6 h2{
+	font-weight: normal;
+}
+.marketing .col-lg-6 p{
+	margin-left: 10px;
+	margin-right: 10px;	
+}
+.img {
+	vertical-align: middle;
+}
+.img-circle {
+	height: 140px;
+	width: 140px;
+}
+
+/*CUSTOMIZE CONTAINER WRAPPER FOR ADDITIONAL PAGES
+---------------------------*/
+.container-wrapper {
+	position: relative;
+	z-index: 9;
+	margin-top: 90px;
+}
 @import 'bootstrap';
