@@ -1,4 +1,4 @@
-$body-bg:		#ffffff;
+$body-bg:		#fa9a97;
 $navbar-default-link-color:		#fa9a97;
 $navbar-default-link-hover-color:		#bdc3c7;
 $btn-primary-bg:		#1abc9c;
@@ -37,6 +37,10 @@ $btn-primary-bg:		#1abc9c;
   padding-right: 20px;
   margin-top: 190px;
   text-align: left;
+}
+
+.carousel .container .carousel-caption p {
+	font-size: 16px;
 }
 
 .carousel .container .btn {
@@ -96,6 +100,49 @@ $btn-primary-bg:		#1abc9c;
 .container-wrapper {
 	position: relative;
 	z-index: 9;
-	margin-top: 90px;
+	margin-top: 90px; /*Margin added to move container contents down from "relative" navbar-wrapper */
 }
+
+/*CUSTOMIZE FOOTER
+---------------------------*/
+.footer {
+	font-size: 14px;
+	background-color: #34495e;
+	text-align: center;
+	padding: 10px 0;
+	color: #bdc3c7;
+	margin-top: 60px;
+}
+
+.footer .col-sm-3{
+	background-color: #34495e;
+	/*NEED TO UNDERSTAND HOW TO APPLY BACKGROUND COLOR TO .FOOTER CLASS */
+
+}
+
+.footer a {
+	color: #f47673;
+	/*NOTE THAT SEPARATE CSS IS NEEDED FOR LINKS (NOT INHERITED FROM .FOOTER CLASS) */
+}
+
+/*CUSTOMIZE CONTENT CONTAINERS
+---------------------------*/
+.left-container {
+	text-align: left;
+	margin-top: 60px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 40px;
+	padding-top: 40px;
+	background-color: #ffb57d;
+}
+
+/*NEED TO UNDERSTAND HOW TO MAKE BACKGROUND COLOR FOR CONTAINER INCLUSIVE OF CUSTOMIZED CONTAINERS*/
+
+.right-container{
+	text-align: right;
+	margin-top: 60px;
+	margin-right: 0px;
+}
+
 @import 'bootstrap';
