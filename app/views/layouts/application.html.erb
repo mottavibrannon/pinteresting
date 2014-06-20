@@ -16,5 +16,11 @@
 	<%= render 'layouts/header' %>
   <%= yield %>	
   <%= render 'layouts/footer' %>
+  <% flash.each do |name,msg| %>
+
+    <!--Note that :abc=> is old Ruby syntax -->
+    <%= content_tag(:div, msg, :class=> "alert alert-info") %>
+  <% end %>
+
 </body>
 </html>

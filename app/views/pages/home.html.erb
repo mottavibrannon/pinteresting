@@ -17,7 +17,15 @@
           <h1>Welcome to FitSum</h1>
           <p>FitSum is the easiest way to create customized workout routines</p>
           <p>
-            <%= link_to "Sign Up","#", class: "btn btn-large btn-primary"%>
+            
+             <% if user_signed_in? %>
+              <div class="btn btn-large btn-primary">
+                Get Started
+              </div>
+            <% elsif %>
+              <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-large btn-primary  "%>
+            <% end %>
+
           </p>
         </div>
       </div><!-- /.container -->
@@ -29,7 +37,15 @@
           <h1>Built Just for You</h1>
           <p>FitSum learns your fitness profile and only creates routines that best fit you and your unique style</p>
           <p>
-            <%= link_to "Sign Up","#", class: "btn btn-large btn-primary  "%>
+
+            <% if user_signed_in? %>
+              <div class="btn btn-large btn-primary">
+                Get Started
+              </div>
+            <% elsif %>
+              <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-large btn-primary  "%>
+            <% end %>
+
           </p>  
         </div>
       </div><!-- /.container -->
@@ -41,7 +57,15 @@
           <h1>In the Moment</h1>
           <p>FitSum allows you to create unique workout based on your current needs.  At the house and only have a chair?  No problem.  FitSum will create a great workout just for you to give you that quick pump</p>
           <p>
-            <%= link_to "Sign Up","#", class: "btn btn-large btn-primary"%>
+            
+             <% if user_signed_in? %>
+              <div class="btn btn-large btn-primary">
+                Get Started
+              </div>
+            <% else %>
+              <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-large btn-primary  "%>
+            <% end %>
+
           </p>
         </div>
       </div><!-- /.container -->
