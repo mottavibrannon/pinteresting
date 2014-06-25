@@ -43,25 +43,32 @@ $btn-primary-bg:		#1abc9c;
 	font-size: 16px;
 }
 
-.carousel .container .btn {
+.btn.btn-large.btn-primary {
 	padding: 9px 20px;
 	font-size: 17.5px;
 	border-radius: 6px;
 }
 
-.carousel-control {
-	height: 500px;
-	margin-top: 0px;
-	font-size: 120px;
-	text-shadow: 0 1px 1px rgba(0,0,0,0);
-	background-color: transparent;
-	border: 0;
-	z-index: 10;
-}
+
 
 /*CUSTOMIZE NAVBAR
 -----------------------------*/
 .navbar-wrapper {
+	position: relative;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+	margin-top: 20px;
+}
+
+.navbar-brand {
+	font-weight: bold;
+}
+
+/*CUSTOMIZE HOMESCREEN NAVBAR
+-----------------------------*/
+.home-navbar-wrapper {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -69,6 +76,11 @@ $btn-primary-bg:		#1abc9c;
 	z-index: 10;
 	margin-top: 20px;
 }
+
+.navbar-brand {
+	font-weight: bold;
+}
+
 
 /*CUSTOMIZE MARKETING CONTAINER
 -----------------------------*/
@@ -93,14 +105,6 @@ $btn-primary-bg:		#1abc9c;
 .img-circle {
 	height: 140px;
 	width: 140px;
-}
-
-/*CUSTOMIZE CONTAINER WRAPPER FOR ADDITIONAL PAGES
----------------------------*/
-.container-wrapper {
-	position: relative;
-	z-index: 9;
-	margin-top: 90px; /*Margin added to move container contents down from "relative" navbar-wrapper */
 }
 
 /*CUSTOMIZE FOOTER
@@ -129,20 +133,20 @@ $btn-primary-bg:		#1abc9c;
 ---------------------------*/
 .left-container {
 	text-align: left;
-	margin-top: 60px;
 	margin-left: auto;
 	margin-right: auto;
-	padding-bottom: 40px;
-	padding-top: 40px;
-	background-color: #ffb57d;
 }
 
 /*NEED TO UNDERSTAND HOW TO MAKE BACKGROUND COLOR FOR CONTAINER INCLUSIVE OF CUSTOMIZED CONTAINERS*/
 
-.right-container{
+.right-container {
 	text-align: right;
 	margin-top: 60px;
 	margin-right: 0px;
+}
+
+.featurette-divider {
+	margin: 80px;
 }
 
 @import 'bootstrap';

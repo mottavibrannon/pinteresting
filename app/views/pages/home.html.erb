@@ -1,5 +1,52 @@
-<!--CUSTOM CAROUSEL CONTAINER-->
+<!-- NAVBAR -->
+<div class="home-navbar-wrapper">
+  <div class="container">
+    <nav class="navbar navbar-inverse" role="navigation">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <%= link_to "FitSum", root_path, :class=>"navbar-brand"%>
 
+          </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li>
+              <%= link_to "About Us", about_path%>
+            </li>
+            <li>
+              <%= link_to "Contact Us", contact_us_path%>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+              <% if user_signed_in? %>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Account<b class="caret"></b></a>
+                  <ul class="dropdown-menu dropdown-menu-right">
+                    <li><%=link_to "Account Settings", edit_user_registration_path, align: "right"%></li>
+                      <li class="divider"></li>
+                      <li><%=link_to "Log Out", destroy_user_session_path, method: :delete, align: "right" %></li>
+                  </ul>
+              <% elsif !user_signed_in? %>
+                <li><%=link_to "Log In", new_user_session_path, align: "right" %></li>
+              <% end %>
+            </li><!-- /dropdown -->
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+  </nav>
+  </div><!-- /.container -->
+</div><!-- /.home-navbar-wrapper -->
+
+<!-- CAROUSEL -->
 <div id="homeCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
@@ -10,6 +57,7 @@
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
+    
     <div class="item active">
       <%= image_tag("cheeseBoard.jpg", :alt=>"Cheese Board") %> 
       <div class="container">
@@ -27,9 +75,10 @@
             <% end %>
 
           </p>
-        </div>
+        </div><!-- /.carousel-caption -->
       </div><!-- /.container -->
-    </div>
+    </div><!-- /.item active-->
+
     <div class="item">
       <%= image_tag("moscowMule.jpg", :alt=>"Moscow Mule") %>
       <div class="container">
@@ -47,38 +96,42 @@
             <% end %>
 
           </p>  
-        </div>
+        </div><!-- /.carousel-caption -->
       </div><!-- /.container -->
     </div><!-- /.item -->
+    
     <div class="item">
       <%= image_tag("dinnerTable.jpeg", :alt=>"Dinner Table") %>
       <div class="container">
         <div class="carousel-caption">
           <h1>In the Moment</h1>
           <p>FitSum allows you to create unique workout based on your current needs.  At the house and only have a chair?  No problem.  FitSum will create a great workout just for you to give you that quick pump</p>
+          
           <p>
-            
-             <% if user_signed_in? %>
-              <div class="btn btn-large btn-primary">
-                Get Started
-              </div>
-            <% else %>
-              <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-large btn-primary  "%>
-            <% end %>
-
+           <% if user_signed_in? %>
+            <div class="btn btn-large btn-primary">
+              Get Started
+            </div>
+          <% else %>
+            <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-large btn-primary  "%>
+          <% end %>
           </p>
-        </div>
+          
+        </div><!-- /.carousel-caption -->
       </div><!-- /.container -->
     </div><!-- /.item -->
+
   </div><!-- /.carousel-inner -->
 
-  <!-- Controls -->
+
+
   <a class="left carousel-control" href="#homeCarousel" data-slide="prev">
     <span class="glyphicon glyphicon-chevron-left"></span>
   </a>
   <a class="right carousel-control" href="#homeCarousel" data-slide="next">
     <span class="glyphicon glyphicon-chevron-right"></span>
   </a>
+
 </div>
 
 <!--CUSTOM MARKETING CONTAINER-->
@@ -101,6 +154,7 @@
   </div><!-- /.row-->
 </div><!-- /.marketing container-->
 
+<hr class="featurette-divider">
 
 <!--CUSTOM MIDDLE CONTAINER-->
 <div class="container left-container">
@@ -108,14 +162,12 @@
     <p>FitSum learns your fitness profile and only creates routines that best fit you and your unique style</p>
 </div>  
 
+<hr class="featurette-divider">
+
 <!--CUSTOM MIDDLE CONTAINER-->
 <div class="container right-container">
     <h1>In the Moment</h1>
     <p>FitSum allows you to create unique workout based on your current needs.  At the house and only have a chair?  No problem.  FitSum will create a great workout just for you to give you that quick pump</p>
-</div>
-
-<div class="divider">
-  This is a divider
 </div>
 
 
