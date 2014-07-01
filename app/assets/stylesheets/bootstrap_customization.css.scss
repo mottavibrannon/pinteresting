@@ -86,12 +86,12 @@ $navbar-inverse-brand-hover-color:		#fa9a97;
 
 /*CUSTOMIZE MARKETING CONTAINER
 -----------------------------*/
-.marketing {
+.marketing .col-lg-6 {
 	text-align: center;
 }
-
-.container.marketing.title{
+.container-marketing-title{
 	padding-bottom: 40px;
+	text-align: center;
 }
 
 .marketing .col-lg-6 h2{
@@ -109,6 +109,10 @@ $navbar-inverse-brand-hover-color:		#fa9a97;
 	width: 140px;
 }
 
+.col-lg-8.col-lg-offset-4 {
+	text-align: right;
+}
+
 /*CUSTOMIZE FOOTER
 ---------------------------*/
 .footer {
@@ -116,19 +120,11 @@ $navbar-inverse-brand-hover-color:		#fa9a97;
 	background-color: #34495e;
 	text-align: center;
 	padding: 10px 0;
+	bottom: 0;
 	color: #bdc3c7;
 	margin-top: 60px;
-}
-
-.footer .col-sm-3{
-	background-color: #34495e;
-	/*NEED TO UNDERSTAND HOW TO APPLY BACKGROUND COLOR TO .FOOTER CLASS */
-
-}
-
-.footer a {
-	color: #f47673;
-	/*NOTE THAT SEPARATE CSS IS NEEDED FOR LINKS (NOT INHERITED FROM .FOOTER CLASS) */
+	position: absolute;
+	width: 100%;
 }
 
 /*CUSTOMIZE CONTENT CONTAINERS
@@ -148,7 +144,8 @@ $navbar-inverse-brand-hover-color:		#fa9a97;
 }
 
 .featurette-divider {
-	margin: 80px;
+	margin-top: 80px;
+	margin-bottom: 80px;
 }
 
 @import 'bootstrap';
