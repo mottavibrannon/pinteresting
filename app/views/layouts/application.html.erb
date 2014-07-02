@@ -13,17 +13,17 @@
 
 </head>
 <body>
-	<%= render 'layouts/header' unless @disable_navbar %>
-  <!-- Check if primary container should be disabled to allow full-screen carousel -->
-  <% if @disable_primary_container %>
-    <%= yield %>	
-  <% else %>
-    <div class="container" >
+  <div id="wrap">
+  	<%= render 'layouts/header' unless @disable_navbar %>
+    <!-- Check if primary container should be disabled to allow full-screen carousel -->
+    <% if @disable_primary_container %>
       <%= yield %>
-    </div>  
-
-  <% end %>
-  <%= render 'layouts/footer' %>
-
+    <% else %>
+      <div class="container">
+        <%= yield %>
+      </div>  
+    <% end %>
+  </div>
+<%= render 'layouts/footer'%>
 </body>
 </html>
