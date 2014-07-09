@@ -1,0 +1,27 @@
+<%= form_for(@dish) do |f| %>
+  <% if @dish.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dish.errors.count, "error") %> prohibited this dish from being saved:</h2>
+
+      <ul>
+      <% @dish.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="form-group">
+    <div><%= f.label :name %>
+      <%= f.text_field :name, class: "form-control" %></div>
+    <div><%= f.label :description %>
+      <%= f.text_field :description, class: "form-control" %></div>
+</div>
+
+<!--If page is asking user to edit content, show different button -->
+<% if current_page?(controller: 'dishes', action: "new") %>
+  <div><%= f.submit "Create Dish", class: "btn btn-large" %></div>
+<% elsif current_page?(controller: 'dishes', action: "edit") %>
+  <div><%= f.submit "Save Changes", class: "btn btn-large" %></div>
+<% end %>
+<% end %>

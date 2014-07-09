@@ -14,20 +14,23 @@ html, body {
 	min-height: 100%;
 	height: auto !important;
 	margin-top: 0px;
-	margin-right: auto;
 	margin-bottom: -50px;
+	margin-right: auto;
+	position: relative;
 	/*NEED TO FIGURE OUT HOW TO PREVENT OVERFLOW AT BOTTOM OF FOOTER*/
 }
 
 #footer {
 	height: 50px;
-	background-color: #f5f5f5;
+	background-color: #bdc3c7;
 	position: relative;
 }
 
 #footer .row {
 	font-size: 14px;
-	margin-top: 15px
+	margin-top: 15px;
+	text-align: center;
+
 }
 
 
@@ -53,6 +56,9 @@ html, body {
 
 /*CUSTOMIZE CAROUSEL CONTAINER
 -----------------------------*/
+.marketing.container {
+	margin-bottom: 130px; /*Adding 130px margin to bump footer down on home page*/
+}
 .carousel .container {
 	position: relative;
 	z-index: 9;
@@ -82,7 +88,6 @@ html, body {
 /*PADDING ON NAVBAR WRAPPER PUSHES FOOTER DOWN TO BOTTOM*/
 .navbar-wrapper {
 	position: relative;
-	top: 0;
 	left: 0;
 	right: 0;
 	z-index: 10;
@@ -97,7 +102,6 @@ html, body {
 -----------------------------*/
 .home-navbar-wrapper {
 	position: absolute;
-	top: 0;
 	left: 0;
 	right: 0;
 	z-index: 10;
@@ -114,6 +118,7 @@ html, body {
 .marketing .col-lg-6 {
 	text-align: center;
 }
+
 .container-marketing-title{
 	padding-bottom: 40px;
 	text-align: center;
