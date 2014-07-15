@@ -12,6 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
+
 <body>
   <div id="wrap">
   	<%= render 'layouts/header' unless @disable_navbar %>
@@ -20,6 +21,9 @@
       <%= yield %>
     <% else %>
       <div class="container">
+        <% flash.each do |name, msg| %>
+        <%= content_tag(:div, msg, class: "alert alert-#{name}") %>
+        <% end %>
         <%= yield %>
       </div>  
     <% end %>

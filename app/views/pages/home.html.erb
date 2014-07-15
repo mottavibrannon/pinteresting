@@ -67,9 +67,7 @@
           <p>
             
              <% if user_signed_in? %>
-              <div class="btn btn-large btn-primary">
-                Get Started
-              </div>
+              <%= link_to "Get Started", dishes_path, class: "btn btn-large btn-primary" %>
             <% elsif %>
               <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-large btn-primary  "%>
             <% end %>
@@ -88,9 +86,7 @@
           <p>
 
             <% if user_signed_in? %>
-              <div class="btn btn-large btn-primary">
-                Get Started
-              </div>
+              <%= link_to "Get Started", dishes_path, class: "btn btn-large btn-primary" %>
             <% elsif %>
               <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-large btn-primary  "%>
             <% end %>
@@ -109,9 +105,7 @@
           
           <p>
            <% if user_signed_in? %>
-            <div class="btn btn-large btn-primary">
-              Get Started
-            </div>
+              <%= link_to "Get Started", dishes_path, class: "btn btn-large btn-primary" %>
           <% else %>
             <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-large btn-primary  "%>
           <% end %>

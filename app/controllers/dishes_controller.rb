@@ -1,6 +1,7 @@
 class DishesController < ApplicationController
   before_action :set_dish, only: [:show, :edit, :update, :destroy]
-
+  before_action :correct_user, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
   # GET /dishes
   # GET /dishes.json
   def index
@@ -14,7 +15,7 @@ class DishesController < ApplicationController
 
   # GET /dishes/new
   def new
-    @dish = Dish.new
+    @dish = current_user.dishes.build
   end
 
   # GET /dishes/1/edit
@@ -24,7 +25,7 @@ class DishesController < ApplicationController
   # POST /dishes
   # POST /dishes.json
   def create
-    @dish = Dish.new(dish_params)
+    @dish = current_user.dishes.build(dish_params)
 
     respond_to do |format|
       if @dish.save
@@ -67,8 +68,21 @@ class DishesController < ApplicationController
       @dish = Dish.find(params[:id])
     end
 
+    # Prevent users from accessing edit functionality via URLs
+    def correct_user
+      if current_user
+        @dish = current_user.dishes.find_by(id: params[:id])
+        redirect_to dishes_path, notice: "You are not authorized to make changes to that dish" if @dish.nil?
+      else
+        redirect_to new_user_session_path, notice: "Please sign in to continue."
+      end
+
+    end
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def dish_params
-      params.require(:dish).permit(:name, :description)
+      params.require(:dish).permit(:name, :description, :image)
+
     end
+
 end
