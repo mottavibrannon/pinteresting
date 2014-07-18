@@ -16,6 +16,9 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
+# 
+gem 'jquery-turbolinks'
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
@@ -25,9 +28,16 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 
+# Generate users
 gem 'devise', '~> 3.2.4'
+
+# Upload images to AWS S3
 gem 'paperclip', '~> 4.1'
-gem 'aws-sdk'
+gem 'aws-sdk', '~>1.47.0'
+
+# Add javascript grid layoud library
+gem 'masonry-rails', '~>0.2.0'
+
 
 # If you are using a version of Ruby older than 1.9, you may encounter problems with Nokogiri. The authors dropped support for Ruby 1.8.x in Nokogiri 1.6. To use aws-sdk, you'll also have to install or specify a version of Nokogiri prior to 1.6, like this:
 gem 'nokogiri', '~> 1.5.0'
