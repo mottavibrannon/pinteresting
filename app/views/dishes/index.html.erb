@@ -4,7 +4,9 @@
       <%= image_tag dish.image.url(:thumb) %>
       <%= dish.name %>
       <%= dish.description %>
-      <%= dish.user.email if dish.user %></td> <!--Prevent error for Dishes that do not have users -->
+      <%if dish.user == current_user %>
+        Created by: <%= dish.user.email if dish.user %></td> <!--Prevent error for Dishes that do not have users -->
+      <% end %>
       <%= link_to 'Show', dish %>
       <%if dish.user == current_user %>
         <%= link_to 'Edit', edit_dish_path(dish) %>
