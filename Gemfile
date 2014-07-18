@@ -31,7 +31,7 @@ gem 'paperclip', '~> 4.1'
 # If you are using a version of Ruby older than 1.9, you may encounter problems with Nokogiri. The authors dropped support for Ruby 1.8.x in Nokogiri 1.6. To use aws-sdk, you'll also have to install or specify a version of Nokogiri prior to 1.6, like this:
 gem 'nokogiri', '~> 1.5.0'
 # AWS S3 direct upload such that one does not need to wait on Heroku
-#gem 's3_direct_upload', '~> 0.1.7'
+
 
 # Use sqlite3 as the database for Active Record
 group :development, :test do
