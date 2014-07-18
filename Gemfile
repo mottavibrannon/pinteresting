@@ -27,6 +27,7 @@ gem 'spring',        group: :development
 
 gem 'devise', '~> 3.2.4'
 gem 'paperclip', '~> 4.1'
+gem 'aws-sdk'
 
 # If you are using a version of Ruby older than 1.9, you may encounter problems with Nokogiri. The authors dropped support for Ruby 1.8.x in Nokogiri 1.6. To use aws-sdk, you'll also have to install or specify a version of Nokogiri prior to 1.6, like this:
 gem 'nokogiri', '~> 1.5.0'
