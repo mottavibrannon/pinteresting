@@ -14,7 +14,6 @@
 </head>
 
 <body>
-  <div id="wrap">
   	<%= render 'layouts/header' unless @disable_navbar %>
     <!-- Check if primary container should be disabled to allow full-screen carousel -->
     <% if @disable_primary_container %>
@@ -22,12 +21,11 @@
     <% else %>
       <div class="container">
         <% flash.each do |name, msg| %>
-        <%= content_tag(:div, msg, class: "alert alert-#{name}") %>
+          <%= content_tag(:div, msg, class: "alert alert-#{name}") %>
         <% end %>
         <%= yield %>
       </div>  
     <% end %>
-  </div>
 <!-- <%= render 'layouts/footer'%> -->
 </body>
 </html>

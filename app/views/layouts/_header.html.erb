@@ -28,15 +28,25 @@
           <ul class="nav navbar-nav navbar-right">
               <% if user_signed_in? %>
               <li>
-                <%= link_to 'Create a Dish', new_dish_path %>
+                <%= link_to new_dish_path do %>
+                  <span class="glyphicon glyphicon-cutlery"></span> Add a Dish
+                <% end %>
               </li>
             </li>
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Account<b class="caret"></b></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hello <%= current_user.username %>!<b class="caret"></b></a>
                   <ul class="dropdown-menu dropdown-menu-right">
-                    <li><%=link_to "Account Settings", edit_user_registration_path, align: "right"%></li>
-                      <li class="divider"></li>
-                      <li><%=link_to "Log Out", destroy_user_session_path, method: :delete, align: "right" %></li>
+                    <li>
+                      <%= link_to edit_user_registration_path, align: "right" do %>
+                        Account Settings <span class="glyphicon glyphicon-cog"></span>
+                      <% end %>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                      <%= link_to destroy_user_session_path, align: "right", method: :delete do %>
+                        Log Out <span class="glyphicon glyphicon-log-out"></span>
+                      <% end %>
+                    </li>
                   </ul>
               <% elsif !user_signed_in? %>
                 <li><%=link_to "Log In", new_user_session_path, align: "right" %></li>
