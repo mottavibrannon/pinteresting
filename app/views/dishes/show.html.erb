@@ -9,7 +9,7 @@
   <strong>Description:</strong>
   <%= @dish.description %>
 </p>
-<% if @dish.user = current_user %>
+<% if @dish.user == current_user %>
 	<%= link_to edit_dish_path(@dish) do %>
 		<span class="glyphicon glyphicon-pencil"></span> Edit
 	<% end %>

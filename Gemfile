@@ -43,6 +43,9 @@ gem 'masonry-rails', '~>0.2.0'
 gem 'nokogiri', '~> 1.5.0'
 # AWS S3 direct upload such that one does not need to wait on Heroku
 
+# Allow pagination
+gem 'will_paginate', '~> 3.0'
+gem 'will_paginate-bootstrap'
 
 # Use sqlite3 as the database for Active Record
 group :development, :test do
