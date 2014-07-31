@@ -4,5 +4,5 @@ class Dish < ActiveRecord::Base
 
 #In Paperclip 4.0+ must validate content type or explicity state that no validation is required
 	validates_attachment :image, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
-
+	validates :name, :description, presence: true
 end
