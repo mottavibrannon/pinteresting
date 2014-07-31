@@ -8,7 +8,7 @@
     <div class="boxMeta">
       <%= dish.description %>
     </div> <!-- .boxMeta -->
-      <%if dish.user == current_user %>
+      <%if current_user && dish.user == current_user %>
         <div class="boxCredits">
           Created by: <%= dish.user.firstName if dish.user %> <%= dish.user.lastName[0] if dish.user %>.<!--Prevent error for Dishes that do not have users -->
         </div>
