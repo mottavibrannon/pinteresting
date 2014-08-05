@@ -10,11 +10,16 @@
   <%= @dish.description %>
 </p>
 
-	<% if @dish.user %>
-	Created by: <%= @dish.user.firstName %> <%= @dish.user.lastName[0] %>.
+<% if @dish.user && @dish.user.firstName %>
+	Created by: <%= @dish.user.firstName %>
+	<% if @dish.user.lastName %>
+		<%= @dish.user.lastName[0] %>.
 	<% end %>
+<% end %>
 <% if current_user && @dish.user == current_user %>
 	<%= link_to edit_dish_path(@dish) do %>
+	<p>
 		<span class="glyphicon glyphicon-pencil"></span> Edit
+	</p>
 	<% end %>
 <% end %>
