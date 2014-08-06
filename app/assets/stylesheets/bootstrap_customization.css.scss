@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:400,100italic|Open+Sans|Roboto);
+
 $body-bg:		#ecf0f1;
 $navbar-default-link-color:		#fa9a97;
 $navbar-default-link-hover-color:		#bdc3c7;
@@ -5,8 +7,13 @@ $btn-primary-bg:		#1abc9c;
 $navbar-inverse-link-hover-color:		#fa9a97;
 $navbar-inverse-brand-hover-color:		#fa9a97;
 
+
 html, body {
 	height: 100%;
+}
+
+.center {
+	text-align: center;
 }
 
 /*NAVBAR WRAPPER ON NON-CAROUSEL HOMESCREEN BUMPS CONTENT DOWN BECAUSE POSITION IS SET TO RELATIVE, RATHER THAN ABSOLUTE*/
@@ -113,7 +120,6 @@ html, body {
 	font-weight: bold;
 }
 
-
 /*CUSTOMIZE MARKETING CONTAINER
 -----------------------------*/
 .marketing .col-lg-6 {
@@ -163,11 +169,34 @@ html, body {
 	margin-bottom: 80px;
 }
 
-/*CUSTOMIZE FORM 
----------------------------*/
+/*CUSTOMIZE SIGN UP FORM
+-----------------------------*/
+.form-group {
+	padding-top: 20px;
+}
 
 .form-group .form-control {
-	width: 30%; 
+	width: 290px;
+	border: none;
+	border-bottom: 1px solid;
+	border-radius: 0px;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	margin: 0 auto;
+	margin-bottom: 14px
+}
+.form-group .form-control:focus {
+	border-color: inherit;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.panel.panel-default.sign-up {
+	text-align: center;
+	width: 400px;
+	margin: 0 auto;
+	padding-bottom: 20px;
+	border-radius: 20px
 }
 
 @import 'bootstrap';
