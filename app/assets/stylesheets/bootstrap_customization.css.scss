@@ -90,6 +90,7 @@ html, body {
 	padding: 9px 20px;
 	font-size: 17.5px;
 	border-radius: 6px;
+	$label-link-hover-color: #ffffff;
 }
 
 /*CUSTOMIZE NAVBAR
@@ -175,9 +176,42 @@ html, body {
 }
 
 .form-group .form-control:focus {
-	border-bottom: 2px #1abc9c solid;
+	border-bottom: 2px #34495e solid;
 	-webkit-box-shadow: none;
 	box-shadow: none;
+}
+
+input:focus.form-control::-webkit-input-placeholder {
+    color: #34495e;
+
+}
+
+input:focus.form-control::-moz-placeholder {
+    color: #34495e;
+}
+
+input:focus.form-control::-ms-placeholder {
+    color: #34495e;
+}
+
+input:focus.form-control::placeholder {
+    color: #34495e;
+}
+
+input.form-control::-webkit-input-placeholder {
+    color: #ffffff;
+}
+
+input.form-control::-moz-placeholder {
+    color: #ffffff;
+}
+
+input.form-control::-ms-placeholder {
+    color: #ffffff;
+}
+
+input.form-control::placeholder {
+    color: #ffffff;
 }
 
 .panel.panel-default.sessions {
