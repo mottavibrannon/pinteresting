@@ -2,14 +2,16 @@
 
 $body-bg:		#ecf0f1;
 $navbar-default-link-color:		#fa9a97;
+$font-family-sans-serif:			'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $navbar-default-link-hover-color:		#bdc3c7;
 $btn-primary-bg:		#1abc9c;
-$navbar-inverse-link-hover-color:		#fa9a97;
-$navbar-inverse-brand-hover-color:		#fa9a97;
+$navbar-default-link-hover-color:		#fa9a97;
+$navbar-default-brand-hover-color:		#fa9a97;
 
 
 html, body {
 	height: 100%;
+	background: url("pink_radial_background.jpg");
 }
 
 .center {
@@ -93,15 +95,6 @@ html, body {
 /*CUSTOMIZE NAVBAR
 -----------------------------*/
 /*PADDING ON NAVBAR WRAPPER PUSHES FOOTER DOWN TO BOTTOM*/
-.navbar-wrapper {
-	position: relative;
-	left: 0;
-	right: 0;
-	z-index: 10;
-	top: 20px;
-	margin-bottom: 20px;
-}
-
 .navbar-brand {
 	font-weight: bold;
 }
@@ -114,10 +107,6 @@ html, body {
 	right: 0;
 	z-index: 10;
 	top: 20px;
-}
-
-.navbar-brand {
-	font-weight: bold;
 }
 
 /*CUSTOMIZE MARKETING CONTAINER
@@ -161,9 +150,6 @@ html, body {
 	margin-top: 60px;
 }
 
-/*CUSTOMIZE FOOTER
----------------------------*/
-
 .container.marketing .featurette-divider {
 	margin-top: 80px;
 	margin-bottom: 80px;
@@ -178,25 +164,39 @@ html, body {
 .form-group .form-control {
 	width: 290px;
 	border: none;
-	border-bottom: 1px solid;
+	border-bottom: 1px #ffffff solid;
 	border-radius: 0px;
 	-webkit-box-shadow: none;
 	box-shadow: none;
 	margin: 0 auto;
-	margin-bottom: 14px
+	margin-bottom: 14px;
+	background: none;
+
 }
+
 .form-group .form-control:focus {
-	border-color: inherit;
+	border-bottom: 2px #1abc9c solid;
 	-webkit-box-shadow: none;
 	box-shadow: none;
 }
 
-.panel.panel-default.sign-up {
+.panel.panel-default.sessions {
 	text-align: center;
 	width: 400px;
+	top: 50%;
 	margin: 0 auto;
 	padding-bottom: 20px;
-	border-radius: 20px
+	border-radius: 10px;
+	background: none;
+	border: none;
+	box-shadow: none;
+}
+
+.btn-large.sign-up {
+	width: 190px;
+	margin-bottom: 14px;
+	background-color: #34495e;
+	color: #1abc9c;
 }
 
 @import 'bootstrap';
