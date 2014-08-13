@@ -1,32 +1,27 @@
-<div class="panel panel-default">
-  <h2>Edit <%= resource_name.to_s.humanize %></h2>
+<%= link_to "Back", :back %>
+<div class="panel panel-default sessions">
+  <font color="#34495e"><h2>Edit <%= resource_name.to_s.humanize %></h2> </font>
 
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
     <%= devise_error_messages! %>
 
     <div class="form-group">
 
-      <div><%= f.label :firstName, "First Name" %>
-        <%= f.text_field :firstName, autofocus: true, class: "form-control" %></div>
+      <div><%= f.text_field :firstName, autofocus: true, class: "form-control", placeholder: "First Name" %></div>
 
-      <div><%= f.label :lastName, "Last Name" %>
-        <%= f.text_field :lastName, autofocus: true, class: "form-control" %></div>
+      <div><%= f.text_field :lastName, class: "form-control", placeholder: "Last Name" %></div>
 
-      <div><%= f.label :username, "Username" %>
-        <%= f.text_field :username, autofocus: true, class: "form-control" %></div>
+      <div><%= f.text_field :username, class: "form-control", placeholder: "Username" %></div>
 
-      <div><%= f.label :email, "Email Address" %>
-      <%= f.email_field :email, autofocus: true, class: "form-control" %></div>
+      <div><%= f.email_field :email, class: "form-control", placeholder: "Email" %></div>
 
       <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
         <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
       <% end %>
 
-      <div><%= f.label :password, "Password" %><br/><i>(leave blank if you don't want to change it)</i>
-        <%= f.password_field :password, autocomplete: "off", class: "form-control" %></div>
+      <div><%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "Current Password" %></div>
 
-      <div><%= f.label :password_confirmation, "Confirm Password" %>
-        <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %></div>
+      <div><%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", placeholder: "Confirm Password" %></div>
 
       <div><%= f.label :current_password, "Current Password" %><br/><i>(we need your current password to confirm your changes)</i>
         <%= f.password_field :current_password, autocomplete: "off", class: "form-control" %></div>
@@ -34,10 +29,5 @@
       <div><%= f.submit "Update", class: "btn btn-large btn-primary" %></div>
     <% end %>
   </div> <!-- .form-group -->
-</div>
-<div class="panel panel-default">
-<h3>Cancel my account</h3>
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-</div> <!-- .panel.panel-default -->
-
-<%= link_to "Back", :back %>
+<font color="#bdc3c7">Unhappy? </font><%= link_to "Delete your account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %>
+</div><!-- .panel.panel-default.sessions -->
