@@ -6,24 +6,34 @@
   margin: 0 auto;
 }
 
+.boxTitle {
+	padding: 8px 14px 8px;
+	border-top: 1px;
+	background: #ffffff;
+	border-radius: 4px 4px 0 0;
+	color: #34495e;
+}
+
 .box {
 	margin: 5px;
 	width: 214px;
 }
 
 .box img {
-	width: 100%
+	width: 100%;
 }
 
 .boxMeta {
 	padding: 8px 14px 8px;
 	background: #ffffff;
+	width: auto;
 }
 
-.boxCredits {
+.boxCredits, .boxMeta.no-user {
 	padding: 8px 14px 8px;
 	border-top: 1px;
 	background: #ffffff;
+	border-radius: 0 0 10px 10px;
 }
 
 .boxOptions {

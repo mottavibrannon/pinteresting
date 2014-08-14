@@ -5,7 +5,7 @@ class DishesController < ApplicationController
   # GET /dishes
   # GET /dishes.json
   def index
-    @dishes = Dish.all.order("created_at DESC").paginate(page: params[:page], per_page: "15")
+    @dishes = Dish.all.order("created_at DESC").paginate(page: params[:page], per_page: "4")
   end
 
   # GET /dishes/1
@@ -29,7 +29,7 @@ class DishesController < ApplicationController
 
     respond_to do |format|
       if @dish.save
-        format.html { redirect_to @dish, notice: 'Dish was successfully created.' }
+        format.html { redirect_to @dish, notice: 'Dish added successfully!' }
         format.json { render :show, status: :created, location: @dish }
       else
         format.html { render :new }

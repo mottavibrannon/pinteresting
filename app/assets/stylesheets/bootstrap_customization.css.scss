@@ -1,24 +1,25 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:400,100italic|Open+Sans|Roboto);
 
-$body-bg:		#fa9a97;
-$navbar-default-link-color:		#fa9a97;
+$body-bg:		#fa9a97; //Salmon
+$navbar-default-link-color:		#fa9a97; //Salmon
 $font-family-sans-serif:			'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$navbar-default-link-hover-color:		#bdc3c7;
-$btn-primary-bg:		#1abc9c;
-$navbar-default-link-hover-color:		#fa9a97;
-$navbar-default-brand-hover-color:		#fa9a97;
+$btn-primary-bg:		#1abc9c;  //Green
+
+//Navbar
+$navbar-default-link-hover-color:		#34495e;  //Salmon
+$navbar-default-brand-hover-color:		#34495e;  //Salmon
+
+//Pagination
+$pagination-color: #fa9a97;  //Salmon
+$pagination-active-bg: #34495e;  //Blue
+$pagination-hover-color: #fa9a97;  //Salmon
+$pagination-active-border: #34495e;  //Blue
+$pagination-active-color: #1abc9c;  //Muted Green
 
 
 html, body {
 	height: 100%;
 	//background: url("pink_radial_background.jpg");
-}
-
-.animated.input_field {
-	-webkit-animation-delay: 0.75s;
-}
-.center {
-	text-align: center;
 }
 
 /*NAVBAR WRAPPER ON NON-CAROUSEL HOMESCREEN BUMPS CONTENT DOWN BECAUSE POSITION IS SET TO RELATIVE, RATHER THAN ABSOLUTE*/
@@ -44,7 +45,6 @@ html, body {
 	text-align: center;
 
 }
-
 
 /*CUSTOMIZE CAROUSEL
 -----------------------------*/
@@ -93,7 +93,6 @@ html, body {
 	padding: 9px 20px;
 	font-size: 17.5px;
 	border-radius: 6px;
-	$label-link-hover-color: #ffffff;
 }
 
 /*CUSTOMIZE NAVBAR
@@ -184,6 +183,19 @@ html, body {
 	box-shadow: none;
 }
 
+.animated.input_field {
+	-webkit-animation-delay: 0.75s;
+}
+.center {
+	text-align: center;
+	-webkit-animation-delay: 0.75s;
+}
+
+.session-base.animated {
+	padding-top: 14px;
+	-webkit-animation-delay: 1s;
+}
+
 input:focus.form-control::-webkit-input-placeholder {
     color: #34495e;
 
@@ -229,11 +241,26 @@ input.form-control::placeholder {
 	box-shadow: none;
 }
 
+.panel.panel-default.dishes {
+	text-align: center;
+	width: auto;
+	top: 50%;
+	margin: 0 auto;
+	padding-bottom: 20px;
+	border-radius: 10px;
+	background: none;
+	border: none;
+	box-shadow: none;
+}
+
 .btn-large.sign-up {
 	width: 190px;
 	margin-bottom: 14px;
 	background-color: #34495e;
 	color: #1abc9c;
 }
+
+/*CUSTOMIZE DISHES INDEX
+-----------------------------*/
 
 @import 'bootstrap';

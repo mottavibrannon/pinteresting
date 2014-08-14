@@ -1,13 +1,26 @@
+<%= form_tag do %>
+This will be where people can decide how many dishes will be visible per page
+<% end %>
 <div id="dishes">
   <% @dishes.each do |dish| %>
-  <div class="box">
-    <div class="boxTitle">
-      <h4><%= dish.name %></h4>
-    </div>
-      <%= link_to( image_tag(dish.image.url(:medium)), dish)%>
-    <div class="boxMeta">
-      <%= dish.description %>
-    </div> <!-- .boxMeta -->
+  <div class="box animated fadeInUp">
+    <div class="boxTitle"><%= dish.name %></div>
+
+    <%= link_to( image_tag(dish.image.url(:medium)), dish)%>
+    
+    <% if dish.user && dish.user.firstName %>
+    
+      <div class="boxMeta">
+        <%= dish.description %>
+      </div> <!-- .boxMeta -->
+    
+    <% else %>
+
+      <div class="boxMeta no-user">
+        <%= dish.description %>
+      </div> <!-- .boxMeta.no-user -->
+    
+    <% end %>
 
     <% if dish.user && dish.user.firstName %>
       <div class="boxCredits">
@@ -33,6 +46,6 @@
   <% end %>
 </div>
 
-<div class="center">
+<div class="center animated fadeIn">
   <%= will_paginate @dishes, renderer: BootstrapPagination::Rails %>
 </div>

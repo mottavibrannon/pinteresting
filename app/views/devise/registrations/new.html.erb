@@ -12,7 +12,7 @@
 
 		<div><%= f.text_field :lastName, class: "form-control animated fadeInRight input_field", placeholder: "Last Name" %></div>
 
-		<div><%= f.text_field :username, class: "form-control animated fadeInLeft input_field", placeholder: "Username" %></div>
+		<!--<div><%= f.text_field :username, class: "form-control animated fadeInLeft input_field", placeholder: "Username" %></div> -->
 
 	  <div><%= f.email_field :email, class: "form-control animated fadeInRight input_field", placeholder: "Email" %></div>
 	  
@@ -21,7 +21,7 @@
 	  <div><%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control animated fadeInRight input_field", placeholder: "Confirm Password" %></div>
 	</div>		
 
-	<div class="session_base">
+	<div class="session-base animated bounceInUp">
 		<%= f.submit "Sign Up", class: "btn btn-large sign-up" %></br>
 		<font color="#bdc3c7"><%= render "devise/shared/links" %>
 	</div>
