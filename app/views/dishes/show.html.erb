@@ -1,31 +1,34 @@
 
-<p><%= link_to 'Back', dishes_path %></p>
-<div class="panel panel-default dishes">
-		<div class="boxTitle">
-		  <%= @dish.name %>
-		</div>
+<div class ="box">
+	
+	<p><%= link_to 'Back', dishes_path %></p>
 
-		<%= image_tag @dish.image.url(:medium)%>
+	<div class="boxTitle">
+	  <%= @dish.name %>
+	</div><!-- .boxTitle -->
 
+	<%= image_tag @dish.image.url(:medium)%>
 
-		<div class="boxMeta">
-		  <%= @dish.description %>
-		</div><!-- .boxMeta -->
+	<div class="boxMeta">
+	  <%= @dish.description %>
+	</div><!-- .boxMeta -->
 
-		<div class="boxCredits">
+	<div class="boxCredits">
+
 		<% if @dish.user && @dish.user.firstName %>
 			Created by: <%= @dish.user.firstName %>
 			<% if @dish.user.lastName %>
 				<%= @dish.user.lastName[0] %>.
 			<% end %>
 		<% end %>
-		</div><!-- .boxMeta -->
 
-		<% if current_user && @dish.user == current_user %>
-			<%= link_to edit_dish_path(@dish) do %>
-			<p>
-				<span class="glyphicon glyphicon-pencil"></span> Edit
-			</p>
-			<% end %>
+	</div><!-- .boxCredits -->
+
+	<% if current_user && @dish.user == current_user %>
+		
+		<%= link_to edit_dish_path(@dish) do %>
+			<p><span class="glyphicon glyphicon-pencil"></span> Edit</p>
 		<% end %>
-</div><!-- .panel.panel-default.dishes -->
+	
+	<% end %>
+</div><!-- .box -->
