@@ -165,7 +165,7 @@ html, body {
 }
 
 .form-group .form-control {
-	width: 290px;
+	max-width: 290px;
 	border: none;
 	border-bottom: 1px #ffffff solid;
 	border-radius: 0px;
@@ -231,7 +231,7 @@ input.form-control::placeholder {
 
 .panel.panel-default.sessions {
 	text-align: center;
-	width: 400px;
+	max-width: 400px;
 	top: 50%;
 	margin: 0 auto;
 	padding-bottom: 20px;
