@@ -6,9 +6,6 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # config.secret_key = '4096dd824bf9d3ab328c0510694af02da7e7f4556450567c7e5e408656b38d614039eb9866bfcfc58baf38b90d7b33e8ed8094621c2b8a4b755cb7a82ece0103'
 
-  # Adding secret_key per RAILS_ENV=production rake assets:precompile errors
-  config.secret_key = 'b3185d7d0f0ffd9d3a09888e59440716599502e3d98fc378c3aab5c4c918428f29af488e8d8bf6dea78c4c6e2cab72c0da718e8e3e50f2ff84f642ed3c1480ac'
-
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
