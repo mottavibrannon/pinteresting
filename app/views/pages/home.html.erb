@@ -59,8 +59,27 @@
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
   </nav>
+
+  <!-- FLASH MESSAGES -->
+    <% flash.each do |name, msg| %>
+      <%= content_tag(:div, msg, class: "alert alert-info") %>
+    <% end %>
+
+  <!-- JQUERY CODE TO FADE ALERTS -->
+    <script type="text/javascript">
+
+      $(function() {
+        $('.alert.alert-info')
+        .delay(3000)
+        .fadeOut(function() {
+          $(this).remove();
+        })
+      })
+    </script>
+  
   </div><!-- /.container -->
 </div><!-- /.home-navbar-wrapper -->
+
 
 <!-- CAROUSEL -->
 <div id="homeCarousel" class="carousel slide" data-ride="carousel">
