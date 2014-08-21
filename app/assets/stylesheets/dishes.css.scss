@@ -7,16 +7,19 @@
 }
 
 .boxTitle {
-	padding: 8px 14px 8px;
+	padding: 5px 14px 5px;
 	border-top: 1px;
 	background: #ffffff;
 	border-radius: 4px 4px 0 0;
 	color: #34495e;
+	font-size: 18px;
+
 }
 
 .box {
 	margin: 5px;
-	width: 214px;
+	max-width: 214px;
+
 }
 
 .box img {
@@ -29,14 +32,14 @@
 	width: auto;
 }
 
-.boxCredits, .boxMeta.no-user {
+.boxCredits, .boxMeta.noCredits {
 	padding: 8px 14px 8px;
 	border-top: 1px;
 	background: #ffffff;
-	border-radius: 0 0 4px 4px;
 }
 
-.boxOptions {
+.boxOptions, .boxCredits.noOptions, .boxMeta.noCredits {
 	padding: 8px 14px 8px;
 	background: #ffffff;
+	border-radius: 0 0 4px 4px;
 }

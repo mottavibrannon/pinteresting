@@ -1,10 +1,12 @@
 <%= form_tag do %>
-This will be where people can decide how many dishes will be visible per page
+< This will be where people can decide how many dishes will be visible per page >
 <% end %>
 <div id="dishes">
   <% @dishes.each do |dish| %>
   <div class="box animated fadeInUp">
-    <div class="boxTitle"><%= dish.name %></div>
+    <div class="boxTitle">
+      <%= dish.name %>
+    </div>
 
     <%= link_to( image_tag(dish.image.url(:medium)), dish)%>
     
@@ -13,38 +15,48 @@ This will be where people can decide how many dishes will be visible per page
       <div class="boxMeta">
         <%= dish.description %>
       </div> <!-- .boxMeta -->
-    
+
+      <% if current_user && dish.user == current_user %>
+      
+        <div class="boxCredits">
+          Created by: <%= dish.user.firstName %>
+          <% if dish.user.lastName %>
+            <%= dish.user.lastName[0] %>.
+          <% end %>
+        </div> <!-- .boxCredits -->
+
+        <div class="boxOptions">
+          <%= link_to edit_dish_path(dish) do %>
+            <span class="glyphicon glyphicon-pencil"></span> Edit
+          <% end %>
+
+          <%= link_to dish, method: :delete, data: { confirm: 'Are you sure you want to delte this dish? You cannot undo this action.'} do %>
+            <span class="glyphicon glyphicon-trash"></span> Delete
+          <% end %>
+        </div> <!-- .boxOptions -->
+      
+      <% else %>
+
+        <div class="boxCredits noOptions">
+          Created by: <%= dish.user.firstName %>
+          <% if dish.user.lastName %>
+            <%= dish.user.lastName[0] %>.
+          <% end %>
+        </div> <!-- .boxCredits noOptions -->
+
+      <% end %>
+
     <% else %>
 
-      <div class="boxMeta no-user">
+      <div class="boxMeta noCredits">
         <%= dish.description %>
       </div> <!-- .boxMeta.no-user -->
     
     <% end %>
 
-    <% if dish.user && dish.user.firstName %>
-      <div class="boxCredits">
-        Created by: <%= dish.user.firstName %>
-        <% if dish.user.lastName %>
-          <%= dish.user.lastName[0] %>.
-        <% end %>
-      </div> <!-- .boxCredits -->
-    <% end %>
-
-    <% if current_user && dish.user == current_user %>
-      <div class="boxOptions">
-        <%= link_to edit_dish_path(dish) do %>
-          <span class="glyphicon glyphicon-pencil"></span> Edit
-      <% end %>
-
-        <%= link_to dish, method: :delete, data: { confirm: 'Are you sure you want to delte this dish? You cannot undo this action.'} do %>
-          <span class="glyphicon glyphicon-trash"></span> Delete
-        <% end %>
-      </div> <!-- .boxOptions -->
-    <% end %>
-  </div> <!-- .box -->
-  <% end %>
-</div>
+  </div> <!-- .box.animated.fadeInUp-->
+<% end %> <!-- @dishes do -->
+</div>!<!-- #dishes -->
 
 <div class="center animated fadeIn">
   <%= will_paginate @dishes, renderer: BootstrapPagination::Rails %>

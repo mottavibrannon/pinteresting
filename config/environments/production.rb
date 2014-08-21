@@ -28,7 +28,7 @@ Rails.application.configure do
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   # SETTING TO TRUE TO ALLOW LOADING OF IMAGES ON HEROKU
-  config.assets.compile = true
+  config.assets.compile = false
 
   # Generate digests for assets URLs.
   config.assets.digest = true

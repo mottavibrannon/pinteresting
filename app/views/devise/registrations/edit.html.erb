@@ -19,9 +19,8 @@
         <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
       <% end %>
 
-      <div><%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "Current Password" %></div>
-
-      <div><%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", placeholder: "Confirm Password" %></div>
+        <div><%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "Current Password" %></div>
+        <div><%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", placeholder: "Confirm Password" %></div>
 
       <div><%= f.label :current_password, "Current Password" %><br/><i>(we need your current password to confirm your changes)</i>
         <%= f.password_field :current_password, autocomplete: "off", class: "form-control" %></div>
