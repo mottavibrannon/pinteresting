@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:400,100italic|Open+Sans|Roboto");
-@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css");
 
 $body-bg:		#fa9a97; //Salmon
 $navbar-default-link-color:		#fa9a97; //Salmon
@@ -257,4 +256,5 @@ input.form-control::placeholder {
 	color: #1abc9c;
 }
 
+@import 'bootstrap-sprockets';
 @import 'bootstrap';
