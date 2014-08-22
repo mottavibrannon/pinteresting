@@ -6,8 +6,8 @@ $font-family-sans-serif:			'Lato', 'Helvetica Neue', Helvetica, Arial, sans-seri
 $btn-primary-bg:		#1abc9c;  //Green
 
 //Navbar
-$navbar-default-link-hover-color:		#34495e;  //Salmon
-$navbar-default-brand-hover-color:		#34495e;  //Salmon
+$navbar-default-link-hover-color:		#34495e;  //Asphalt
+$navbar-default-brand-hover-color:		#34495e;  //Asphalt
 
 //Pagination
 $pagination-color: #fa9a97;  //Salmon
@@ -15,7 +15,6 @@ $pagination-active-bg: #34495e;  //Blue
 $pagination-hover-color: #fa9a97;  //Salmon
 $pagination-active-border: #34495e;  //Blue
 $pagination-active-color: #1abc9c;  //Muted Green
-
 
 html, body {
 	height: 100%;
@@ -256,5 +255,8 @@ input.form-control::placeholder {
 	color: #1abc9c;
 }
 
-@import 'bootstrap-sprockets';
+.btn-large.sign-up:hover {
+	color: #fa9a97;
+}
+
 @import 'bootstrap';

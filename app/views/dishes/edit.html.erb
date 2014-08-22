@@ -1,6 +1,12 @@
-<h1>Edit Your Dish</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @dish %> |
 <%= link_to 'Back', dishes_path %>
+<div class="panel panel-default sessions">
+	<div class="center">
+		<font color="#34495e"><h3>Edit Your Dish</h3></font>
+			
+		<%= image_tag @dish.image.url(:medium) %>
+		<%= render 'form' %>
+
+		<%= link_to 'Show', @dish %> |
+		<%= link_to 'Back', dishes_path %>
+	</div><!-- .center -->
+</div><!-- panel.panel-default.sessions -->
